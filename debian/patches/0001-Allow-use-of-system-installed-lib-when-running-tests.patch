@@ -1,0 +1,20 @@
+From: Nicholas D Steeves <nsteeves@gmail.com>
+Date: Mon, 2 Jul 2018 12:46:20 -0400
+Subject: Allow use of system-installed lib when running tests
+Forwarded: not-needed
+
+---
+ bm-tests.el | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bm-tests.el b/bm-tests.el
+index fd19f57..2b50d4c 100644
+--- a/bm-tests.el
++++ b/bm-tests.el
+@@ -1,5 +1,5 @@
+ (require 'ert)
+-(require 'bm (expand-file-name "./bm.el"))
++(require 'bm)
+ 
+ ;; to run tests from command line
+ ;; > emacs -batch -l ert -l bm-tests.el -f ert-run-tests-batch-and-exit
